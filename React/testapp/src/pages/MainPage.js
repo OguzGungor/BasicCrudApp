@@ -8,7 +8,7 @@ import ListPanel from "../panels/ListPanel";
 class MainPage extends React.Component{
 
     state={
-        panel:<CreatePanel/>
+        panel:<ListPanel handleUpdate ={this.updateEntity} />
     }
 
     componentDidMount(){
@@ -29,7 +29,7 @@ class MainPage extends React.Component{
         <button class="tablinks" onClick={()=>{this.setState({panel:<CreatePanel/>})}}>Create</button>
         <button class="tablinks" onClick={()=>{this.setState({panel:<ListPanel handleUpdate ={this.updateEntity} />})}}>List All</button>
       </div>
-      <div>{this.state.panel}</div></>);
+      <div class="mainPanel">{this.state.panel}</div></>);
     }
 
 }

@@ -27,9 +27,11 @@ class UpdatePanel extends React.Component{
 
     render(){
         return (<>
-            <label>Name</label><br/>
-            <input id="update_name" onChange={this.inputChange.bind(this)} defaultValue={this.state.name}/><br/>
-            <button onClick={this.submit.bind(this)}>update</button><br/>
+            <div class="panelElement" >
+                <label >Name : </label>
+                <input id="update_name" onChange={this.inputChange.bind(this)} defaultValue={this.state.name}/>
+            </div>
+            <button class="panelElement" onClick={this.submit.bind(this)}>update</button>
             {(this.state.msg === "NaN")?(null):(this.state.msg + " is created")}
             </>)
         return (this.props.entityId);

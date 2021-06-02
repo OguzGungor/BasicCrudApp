@@ -21,10 +21,12 @@ class CreatePanel extends React.Component{
     render(){
 
         return (<>
-        <label>Name</label><br/>
-        <input id="create_name" onChange={this.inputChange.bind(this)}/><br/>
-        <button onClick={this.submit.bind(this)}>create</button><br/>
-        {(this.state.msg === "NaN")?(null):(this.state.msg + " is created")}
+            <div class="panelElement" >
+                <label >Name : </label>
+                <input id="create_name" onChange={this.inputChange.bind(this)}/>
+            </div>
+            <button class="panelElement" onClick={this.submit.bind(this)}>create</button><br/>
+            {(this.state.msg === "NaN")?(null):(this.state.msg + " is created")}
         </>)
     }
 }
